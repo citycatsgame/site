@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>City Cats: Hidden Cats</title>
+<meta name="description" content="Find cats hiding in cities around the world! 7 cities, 28 districts, 392 cats.">
+<meta name="theme-color" content="#0d2128">
+<link rel="icon" href="img/icon-64.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta property="og:title" content="City Cats: Hidden Cats">
+<meta property="og:description" content="Find cats hiding in cities around the world! 7 cities, 28 districts, 392 cats.">
+<meta property="og:image" content="https://citycatsgame.com/img/og.jpg">
+<meta property="og:url" content="https://citycatsgame.com/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:'Baloo 2';src:url(fonts/baloo2.woff) format('woff');font-weight:400 800;font-display:swap}
+@font-face{font-family:'Nunito';src:url(fonts/nunito.woff) format('woff');font-weight:200 1000;font-display:swap}
+:root{--ink:#0d2128;--panel:#15343d;--rule:#2a5560;--text:#f4ede0;--muted:#9bbcbf;--gold:#f2b53f;--gold-ink:#1d1406;
+  --display:'Baloo 2','Hiragino Sans','Apple SD Gothic Neo','Noto Sans JP','Noto Sans KR',system-ui,sans-serif;
+  --body:'Nunito','Hiragino Sans','Apple SD Gothic Neo','Noto Sans JP','Noto Sans KR',system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:dark}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink);color:var(--text);font:16px/1.6 var(--body)}
+a{color:var(--gold)}
+.wrap{max-width:60rem;margin:0 auto;padding:0 16px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap;text-decoration:none;color:var(--text);font:800 1.25rem/1 var(--display)}
+.brand img{width:36px;height:36px;border-radius:9px}
+.langs{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.langs button,.langs a{font:700 .82rem/1 var(--body);color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:6px 10px;cursor:pointer;text-decoration:none}
+.langs [aria-pressed=true],.langs a:hover{color:var(--gold-ink);background:var(--gold);border-color:var(--gold)}
+h1,h2,h3{font-family:var(--display);line-height:1.1}
+.hero{display:grid;gap:28px;align-items:center;padding:28px 0 12px}
+@media (min-width:820px){.hero{grid-template-columns:1.1fr 1fr}}
+.hero .icon{width:112px;height:112px;border-radius:26px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.hero h1{font-size:clamp(2.6rem,9vw,4.2rem);margin:.3em 0 .1em}
+.tag{font:800 1.25rem/1.25 var(--display);color:var(--gold);margin:0 0 .6em}
+.lede{font-size:1.1rem;color:var(--text);margin:0 0 1em}
+.soon{display:inline-block;border:2px solid var(--gold);color:var(--gold);border-radius:999px;padding:8px 18px;font:800 1rem/1.2 var(--body)}
+ul.feat{list-style:none;padding:0;margin:1.2em 0;display:grid;gap:8px}
+ul.feat li{padding-left:28px;position:relative}
+ul.feat li::before{content:'';position:absolute;left:0;top:.35em;width:16px;height:16px;border-radius:50%;background:var(--gold);box-shadow:inset 0 0 0 4px var(--ink)}
+.shots{display:flex;gap:14px;overflow-x:auto;padding:8px 2px 18px;scroll-snap-type:x mandatory}
+.shots img{flex:none;width:min(62vw,230px);height:auto;border-radius:22px;border:1px solid var(--rule);scroll-snap-align:start;background:var(--panel)}
+.promo{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px 18px;margin:22px 0}
+footer{border-top:1px solid var(--rule);margin-top:40px;padding:22px 0 40px;color:var(--muted);font-size:.92rem;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+.doc h1{font-size:2.1rem;margin:.6em 0 .2em}
+.doc section{border-top:1px solid var(--rule);margin-top:36px;padding-top:6px}
+.doc h2{color:var(--gold);font-size:1.4rem;margin:1em 0 .4em}
+.doc h3{font-size:1.1rem;margin:1.4em 0 .2em}
+.doc .meta{color:var(--muted);margin:0 0 1em}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:.9rem 1.1rem}
+details{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:12px 16px;margin:10px 0}
+summary{cursor:pointer;font-weight:800}
+details p{margin:.6em 0 .2em}
+</style>
+</head>
+<body>
+<header class="wrap top"><a class="brand" href="index.html"><img src="img/icon-64.png" alt="">City Cats</a><div class="langs"><button type="button" data-l="tr" lang="tr" aria-pressed="false">Türkçe</button><button type="button" data-l="en" lang="en" aria-pressed="true">English</button><button type="button" data-l="ja" lang="ja" aria-pressed="false">日本語</button><button type="button" data-l="ko" lang="ko" aria-pressed="false">한국어</button><button type="button" data-l="pt" lang="pt" aria-pressed="false">Português</button><button type="button" data-l="it" lang="it" aria-pressed="false">Italiano</button></div></header><main class="wrap"><div class="lp" data-lang="tr" lang="tr" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="City Cats"><h1>City Cats</h1><p class="tag">Saklı Kedileri Bul: Dünya Turu</p><p class="lede">Dünyanın şehirlerinde saklanan kedileri bul! 7 şehir, 28 semt, 392 kedi.</p>
+<span class="soon">Çok yakında App Store&#x27;da</span><ul class="feat"><li>7 şehir, 28 semt: İstanbul&#x27;dan Rio&#x27;ya</li><li>Gündüz ve gece sahneleri, her birinde komik anlar</li><li>Pasaporta damga topla, haftalık ligde yarış</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-tr-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-tr-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-tr-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">Yeni: Kedi Koleksiyonu! Kendi göz rengi, aksesuarı ve pozu olan 392 kediyi bul. Aralarında 14 nadir kedi var: altın kediler ve şehre özel kediler.</p>
+<footer class="wrap"><span>© 2026 Ahmet Faruk Turhan</span><nav><a href="privacy.html">Gizlilik</a><a href="support.html">Destek</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="en" lang="en">
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="City Cats"><h1>City Cats</h1><p class="tag">Hidden Cats World Tour</p><p class="lede">Find cats hiding in cities around the world! 7 cities, 28 districts, 392 cats.</p>
+<span class="soon">Coming soon to the App Store</span><ul class="feat"><li>7 cities, 28 districts: from Istanbul to Rio</li><li>Day and night scenes, each with its own funny moments</li><li>Collect passport stamps and climb the weekly league</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-en-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-en-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-en-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">New: the Cat Collection! Find 392 unique cats with their own eye colors, accessories and poses, including 14 rare golden and city-special cats.</p>
+<footer class="wrap"><span>© 2026 Ahmet Faruk Turhan</span><nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="ja" lang="ja" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="City Cats"><h1>City Cats</h1><p class="tag">世界一周！ネコ探しの旅</p><p class="lede">世界の街に隠れたネコを探そう！7都市・28エリア・392匹のネコが待っています。</p>
+<span class="soon">まもなく App Store で配信</span><ul class="feat"><li>イスタンブールからリオまで、7都市・28エリア</li><li>昼と夜のシーン、それぞれにクスッと笑える瞬間</li><li>パスポートにスタンプを集めて、週間リーグで競おう</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-ja-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-ja-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-ja-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">新登場：ネココレクション！目の色、アクセサリー、ポーズがそれぞれちがう392匹のネコを見つけよう。各都市の金のネコやご当地ネコなど、14匹のレアネコも隠れています。</p>
+<footer class="wrap"><span>© 2026 Ahmet Faruk Turhan</span><nav><a href="privacy.html">プライバシー</a><a href="support.html">サポート</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="ko" lang="ko" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="City Cats"><h1>City Cats</h1><p class="tag">세계 일주 힐링 퍼즐</p><p class="lede">세계 곳곳의 도시에 숨은 고양이를 찾아보세요! 7개 도시, 28개 지역, 고양이 392마리.</p>
+<span class="soon">곧 App Store에서 만나요</span><ul class="feat"><li>이스탄불부터 리우까지 7개 도시, 28개 지역</li><li>낮과 밤 장면마다 펼쳐지는 재미있는 순간들</li><li>여권 도장을 모으고 주간 리그에서 경쟁하세요</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-ko-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-ko-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-ko-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">새로운 고양이 컬렉션 등장! 눈 색깔, 액세서리, 포즈가 저마다 다른 고양이 392마리를 찾아보세요. 황금 고양이와 도시 한정 고양이 등 희귀 고양이 14마리도 기다리고 있어요!</p>
+<footer class="wrap"><span>© 2026 Ahmet Faruk Turhan</span><nav><a href="privacy.html">개인정보</a><a href="support.html">지원</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="pt" lang="pt" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="City Cats"><h1>City Cats</h1><p class="tag">Volta ao mundo atrás de gatos</p><p class="lede">Ache os gatos escondidos pelo mundo! 7 cidades, 28 bairros e 392 gatos.</p>
+<span class="soon">Em breve na App Store</span><ul class="feat"><li>7 cidades e 28 bairros, de Istambul ao Rio</li><li>Cenas de dia e de noite, cada uma com seus momentos engraçados</li><li>Colecione carimbos no passaporte e suba na liga semanal</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-pt-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-pt-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-pt-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">Novidade: a Coleção de Gatos! Ache 392 gatos únicos, cada um com sua cor de olhos, acessório e pose, incluindo 14 gatos raros: dourados e exclusivos de cada cidade.</p>
+<footer class="wrap"><span>© 2026 Ahmet Faruk Turhan</span><nav><a href="privacy.html">Privacidade</a><a href="support.html">Suporte</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="it" lang="it" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="City Cats"><h1>City Cats</h1><p class="tag">Trova i gatti: giro del mondo</p><p class="lede">Trova i gatti nascosti nelle città del mondo! 7 città, 28 quartieri, 392 gatti.</p>
+<span class="soon">Presto sull&#x27;App Store</span><ul class="feat"><li>7 città e 28 quartieri, da Istanbul a Rio</li><li>Scene di giorno e di notte, ognuna con i suoi momenti buffi</li><li>Colleziona timbri sul passaporto e scala la lega settimanale</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-it-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-it-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-it-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">Novità: la Collezione gatti! Trova 392 gatti unici, ognuno con il suo colore degli occhi, accessorio e posa, tra cui 14 gatti rari: d&#x27;oro ed esclusivi di ogni città.</p>
+<footer class="wrap"><span>© 2026 Ahmet Faruk Turhan</span><nav><a href="privacy.html">Privacy</a><a href="support.html">Assistenza</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div></main><script>
+(function(){var L=['tr','en','ja','ko','pt','it'];function pick(){try{var s=localStorage.getItem('cc-lang');if(L.indexOf(s)>=0)return s;}catch(e){}
+var n=(navigator.languages||[navigator.language||'en']);for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(L.indexOf(c)>=0)return c;}return 'en';}
+function show(c){document.querySelectorAll('.lp').forEach(function(e){e.hidden=e.dataset.lang!==c;});document.querySelectorAll('[data-l]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.l===c));});document.documentElement.lang=c;}
+document.querySelectorAll('[data-l]').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.l);try{localStorage.setItem('cc-lang',b.dataset.l);}catch(e){}});});show(pick());})();
+</script>
+</body>
+</html>
