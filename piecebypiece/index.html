@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Piece by Piece · Art Puzzle</title>
+<meta name="description" content="Piece by Piece: Art Puzzle. Swap the pieces and complete 291 public-domain masterpieces.">
+<meta name="theme-color" content="#0f2e26">
+<link rel="icon" href="img/icon-64.png">
+<link rel="apple-touch-icon" href="img/icon-180.png">
+<meta property="og:title" content="Piece by Piece: Art Puzzle">
+<meta property="og:description" content="Swap the pieces and complete 291 public-domain masterpieces.">
+<meta property="og:image" content="https://citycatsgame.com/piecebypiece/img/og.jpg">
+<meta property="og:url" content="https://citycatsgame.com/piecebypiece/">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+@font-face{font-family:Fredoka;src:url(fonts/fredoka.woff) format('woff');font-weight:500 700;font-display:swap}
+@font-face{font-family:Nunito;src:url(fonts/nunito.woff) format('woff');font-weight:600 800;font-display:swap}
+:root{--ink:#0f2e26;--panel:#16443a;--rule:#2b5e51;--text:#f4ecd8;--muted:#a9c4b8;--gold:#f2a33a;--gold-ink:#241505;
+  --display:Fredoka,'Hiragino Sans','Noto Sans JP',system-ui,sans-serif;
+  --body:Nunito,'Hiragino Sans','Noto Sans JP',system-ui,-apple-system,'Segoe UI',sans-serif;color-scheme:dark}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--ink) radial-gradient(120% 60% at 50% 0%,#1d5d4b 0%,var(--ink) 70%) no-repeat;color:var(--text);font:16px/1.6 var(--body);font-weight:600}
+a{color:var(--gold)}
+.wrap{max-width:60rem;margin:0 auto;padding:0 16px}
+header.top{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 0;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;white-space:nowrap;text-decoration:none;color:var(--text);font:700 1.25rem/1 var(--display)}
+.brand img{width:36px;height:36px;border-radius:9px}
+.langs{display:flex;flex-wrap:wrap;gap:6px;justify-content:flex-end}
+.langs button,.langs a{font:700 .82rem/1 var(--body);color:var(--muted);background:none;border:1px solid var(--rule);border-radius:999px;padding:6px 10px;cursor:pointer;text-decoration:none}
+.langs [aria-pressed=true],.langs a:hover{color:var(--gold-ink);background:var(--gold);border-color:var(--gold)}
+h1,h2,h3{font-family:var(--display);line-height:1.1;font-weight:700}
+.hero{display:grid;gap:28px;align-items:center;padding:28px 0 12px}
+@media (min-width:820px){.hero{grid-template-columns:1.1fr 1fr}}
+.hero .icon{width:112px;height:112px;border-radius:26px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
+.hero h1{font-size:clamp(2.6rem,9vw,4.2rem);margin:.3em 0 .1em}
+.tag{font:700 1.3rem/1.25 var(--display);color:var(--gold);margin:0 0 .6em}
+.lede{font-size:1.1rem;margin:0 0 1em}
+.soon{display:inline-block;border:2px solid var(--gold);color:var(--gold);border-radius:999px;padding:8px 18px;font:800 1rem/1.2 var(--body)}
+ul.feat{list-style:none;padding:0;margin:1.2em 0;display:grid;gap:8px}
+ul.feat li{padding-left:28px;position:relative}
+ul.feat li::before{content:'';position:absolute;left:0;top:.35em;width:16px;height:16px;border-radius:4px;background:var(--gold);box-shadow:inset 0 0 0 4px var(--ink);transform:rotate(-8deg)}
+.shots{display:flex;gap:14px;overflow-x:auto;padding:8px 2px 18px;scroll-snap-type:x mandatory}
+.shots img{flex:none;width:min(62vw,230px);height:auto;border-radius:22px;border:1px solid var(--rule);scroll-snap-align:start;background:var(--panel)}
+.promo{background:var(--panel);border:1px solid var(--rule);border-radius:16px;padding:16px 18px;margin:22px 0}
+.more{color:var(--muted)}
+footer{border-top:1px solid var(--rule);margin-top:40px;padding:22px 0 40px;color:var(--muted);font-size:.92rem;display:flex;flex-wrap:wrap;gap:8px 20px;justify-content:space-between}
+footer nav{display:flex;gap:16px;flex-wrap:wrap}
+.doc h1{font-size:2.1rem;margin:.6em 0 .2em}
+.doc section{border-top:1px solid var(--rule);margin-top:36px;padding-top:6px}
+.doc h2{color:var(--gold);font-size:1.4rem;margin:1em 0 .4em}
+.doc h3{font-size:1.1rem;margin:1.4em 0 .2em}
+.doc .meta{color:var(--muted);margin:0 0 1em}
+.box{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:.9rem 1.1rem}
+details{background:var(--panel);border:1px solid var(--rule);border-radius:12px;padding:12px 16px;margin:10px 0}
+summary{cursor:pointer;font-weight:800}
+details p{margin:.6em 0 .2em}
+</style>
+</head>
+<body>
+<header class="wrap top"><a class="brand" href="index.html"><img src="img/icon-64.png" alt="">Piece by Piece</a><div class="langs"><button type="button" data-l="tr" lang="tr" aria-pressed="false">Türkçe</button><button type="button" data-l="en" lang="en" aria-pressed="true">English</button><button type="button" data-l="ja" lang="ja" aria-pressed="false">日本語</button><button type="button" data-l="de" lang="de" aria-pressed="false">Deutsch</button><button type="button" data-l="fr" lang="fr" aria-pressed="false">Français</button><button type="button" data-l="es" lang="es" aria-pressed="false">Español</button></div></header><main class="wrap"><div class="lp" data-lang="tr" lang="tr" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="Piece by Piece"><h1>Parça Parça</h1><p class="tag">Sanat Bulmacası</p><p class="lede">Parçaları yer değiştir, Mona Lisa&#x27;dan Yıldızlı Gece&#x27;ye dünyanın en sevilen 291 tablosunu tamamla.</p>
+<span class="soon">Çok yakında App Store&#x27;da</span><ul class="feat"><li>50 bölüm, ardından sınırsız serbest oyun</li><li>Her tablonun kısa bir hikayesi var</li><li>Kendi müzenini doldur: 93 ressam, 291 başyapıt</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-tr-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-tr-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-tr-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">Tüm eserler telif süresi dolmuş (kamu malı) başyapıtlardır. Görseller: Wikimedia Commons.</p>
+<p class="more"><a href="../">City Cats&#x27;in diğer oyunu: City Cats: Hidden Cats</a></p>
+<footer class="wrap"><span>© 2026 City Cats</span><nav><a href="privacy.html">Gizlilik</a><a href="support.html">Destek</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="en" lang="en">
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="Piece by Piece"><h1>Piece by Piece</h1><p class="tag">Art Puzzle</p><p class="lede">Swap the pieces and complete 291 of the world&#x27;s best-loved paintings, from the Mona Lisa to The Starry Night.</p>
+<span class="soon">Coming soon to the App Store</span><ul class="feat"><li>50 levels, then endless free play</li><li>A short story for every painting</li><li>Fill your own museum: 93 artists, 291 masterpieces</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-en-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-en-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-en-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">All works are public-domain masterpieces. Images: Wikimedia Commons.</p>
+<p class="more"><a href="../">Also from City Cats: City Cats: Hidden Cats</a></p>
+<footer class="wrap"><span>© 2026 City Cats</span><nav><a href="privacy.html">Privacy</a><a href="support.html">Support</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="ja" lang="ja" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="Piece by Piece"><h1>Piece by Piece</h1><p class="tag">名画パズル</p><p class="lede">ピースを入れ替えて、モナ・リザから星月夜まで、世界で愛される291点の名画を完成させよう。</p>
+<span class="soon">まもなく App Store で配信</span><ul class="feat"><li>50ステージ、その後は無限に遊べるフリープレイ</li><li>すべての絵に短い解説つき</li><li>あなただけの美術館：93人の画家、291点の名画</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-ja-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-ja-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-ja-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">収録作品はすべてパブリックドメインの名画です。画像：ウィキメディア・コモンズ</p>
+<p class="more"><a href="../">City Cats のもうひとつのゲーム：City Cats: Hidden Cats</a></p>
+<footer class="wrap"><span>© 2026 City Cats</span><nav><a href="privacy.html">プライバシー</a><a href="support.html">サポート</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="de" lang="de" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="Piece by Piece"><h1>Piece by Piece</h1><p class="tag">Kunst-Puzzle</p><p class="lede">Tausche die Teile und vollende 291 der beliebtesten Gemälde der Welt, von der Mona Lisa bis zur Sternennacht.</p>
+<span class="soon">Bald im App Store</span><ul class="feat"><li>50 Level, danach endloses freies Spiel</li><li>Zu jedem Gemälde eine kurze Geschichte</li><li>Fülle dein eigenes Museum: 93 Künstler, 291 Meisterwerke</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-de-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-de-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-de-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">Alle Werke sind gemeinfreie Meisterwerke. Bilder: Wikimedia Commons.</p>
+<p class="more"><a href="../">Auch von City Cats: City Cats: Hidden Cats</a></p>
+<footer class="wrap"><span>© 2026 City Cats</span><nav><a href="privacy.html">Datenschutz</a><a href="support.html">Hilfe</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="fr" lang="fr" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="Piece by Piece"><h1>Piece by Piece</h1><p class="tag">Puzzle d&#x27;art</p><p class="lede">Échange les pièces et complète 291 des tableaux les plus aimés au monde, de La Joconde à La Nuit étoilée.</p>
+<span class="soon">Bientôt sur l&#x27;App Store</span><ul class="feat"><li>50 niveaux, puis un jeu libre sans fin</li><li>Une courte histoire pour chaque tableau</li><li>Remplis ton propre musée : 93 artistes, 291 chefs-d&#x27;œuvre</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-fr-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-fr-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-fr-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">Toutes les œuvres sont des chefs-d&#x27;œuvre du domaine public. Images : Wikimedia Commons.</p>
+<p class="more"><a href="../">Également de City Cats : City Cats: Hidden Cats</a></p>
+<footer class="wrap"><span>© 2026 City Cats</span><nav><a href="privacy.html">Confidentialité</a><a href="support.html">Assistance</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div><div class="lp" data-lang="es" lang="es" hidden>
+<section class="hero"><div><img class="icon" src="img/icon-512.png" alt="Piece by Piece"><h1>Piece by Piece</h1><p class="tag">Puzle de arte</p><p class="lede">Intercambia las piezas y completa 291 de los cuadros más queridos del mundo, de La Gioconda a La noche estrellada.</p>
+<span class="soon">Muy pronto en la App Store</span><ul class="feat"><li>50 niveles y después juego libre sin fin</li><li>Una breve historia para cada cuadro</li><li>Llena tu propio museo: 93 artistas, 291 obras maestras</li></ul></div>
+<div class="shots"><img loading="lazy" src="img/shot-es-1.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-es-2.jpg" width="420" height="910" alt=""><img loading="lazy" src="img/shot-es-3.jpg" width="420" height="910" alt=""></div></section>
+<p class="promo">Todas las obras son obras maestras de dominio público. Imágenes: Wikimedia Commons.</p>
+<p class="more"><a href="../">También de City Cats: City Cats: Hidden Cats</a></p>
+<footer class="wrap"><span>© 2026 City Cats</span><nav><a href="privacy.html">Privacidad</a><a href="support.html">Ayuda</a><a href="mailto:citycatsgame@gmail.com">citycatsgame@gmail.com</a></nav></footer></div></main><script>
+(function(){var L=["tr", "en", "ja", "de", "fr", "es"];function pick(){try{var s=localStorage.getItem('pp-lang');if(L.indexOf(s)>=0)return s;}catch(e){}
+var n=(navigator.languages||[navigator.language||'en']);for(var i=0;i<n.length;i++){var c=String(n[i]).slice(0,2).toLowerCase();if(L.indexOf(c)>=0)return c;}return 'en';}
+function show(c){document.querySelectorAll('.lp').forEach(function(e){e.hidden=e.dataset.lang!==c;});document.querySelectorAll('[data-l]').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.l===c));});document.documentElement.lang=c;}
+document.querySelectorAll('[data-l]').forEach(function(b){b.addEventListener('click',function(){show(b.dataset.l);try{localStorage.setItem('pp-lang',b.dataset.l);}catch(e){}});});show(pick());})();
+</script>
+</body>
+</html>
